@@ -1,0 +1,89 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.SignUpModel
+@{
+    ViewData["Title"] = "SignUp page";
+}
+<div class="text-center">
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .signup-container {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+
+            .signup-container h2 {
+                text-align: center;
+                color: white;
+            }
+
+        .signup-form {
+            margin-top: 20px;
+        }
+
+            .signup-form label,
+            .signup-form input {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+                .signup-form input[type="text"],
+                .signup-form input[type="password"] {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                .signup-form input[type="submit"] {
+                    background-color: #FF8300; /* Orange */
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                    .signup-form input[type="submit"]:hover {
+                        background-color: #FF8C00; /* Darker Orange on hover */
+                    }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form class="signup-form" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</body>
+</html>

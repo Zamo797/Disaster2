@@ -1,0 +1,126 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.ActiveDisasterModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Relief Management</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple - change to white */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #800080; /* Orange */
+            color: #FFA500; /*white*/
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white; /* White */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            color: #FFA500; /* Orange  change to purple*/
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Disaster Relief Management</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Allocate Money to Active Disaster</h2>
+
+            <form action="process_allocation.php" method="post">
+                <label for="amount">Amount (ZAR):</label><br><br>
+                <input type="number" id="amount" name="amount" step="0.01" required><br><br>
+
+                <label for="disaster">Select Active Disaster:</label><br><br>
+                <select id="disaster" name="disaster" required>
+                    <option value="disaster1">Tornado</option>
+                    <option value="disaster2">Drought</option>
+                    <option value="disaster3">Flood</option>
+                    <option value="disaster4">Earthquake</option>
+                    <option value="disaster5">Storm</option>
+                    <option value="disaster6">Tsunami</option>
+                    
+                </select><br><br>
+
+                <button type="submit">Allocate Money</button><br><br>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Allocate Goods to Active Disaster</h2>
+            <form action="process_allocation.php" method="post">
+                <label for="goods">Goods Description:</label>
+                <textarea id="goods" name="goods" rows="4" required></textarea><br><br>
+
+                <label for="disaster">Select Active Disaster:</label><br><br>
+                <select id="disaster" name="disaster" required>
+                    <option value="disaster1">Tornado</option>
+                    <option value="disaster2">Drought</option>
+                    <option value="disaster3">Flood</option>
+                    <option value="disaster4">Earthquake</option>
+                    <option value="disaster5">Storm</option>
+                    <option value="disaster6">Tsunami</option>
+                    
+                </select><br><br>
+
+                <button class="purple-button" type="submit">Allocate Goods</button><br><br>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Capture Purchase of Goods</h2>
+            <form action="process_purchase.php" method="post">
+                <label for="item">Added Goods:</label><br><br>
+                <input type="text" id="item" name="item" required><br><br>
+
+                <label for="cost">Available Money (ZAR):</label><br><br>
+                <input type="number" id="cost" name="cost" step="0.01" required><br><br>
+
+                <label for="item">Available Goods:</label><br><br>
+                <input type="text" id="item" name="item" required><br><br>
+
+                <label for="disaster">Allocate Disaster:</label><br><br>
+                <select id="disaster" name="disaster" required>
+                    <br>
+                    <br>
+                    <option value="disaster1">Tornado</option>
+                    <option value="disaster2">Drought</option>
+                    <option value="disaster3">Flood</option>
+                    <option value="disaster4">Earthquake</option>
+                    <option value="disaster5">Storm</option>
+                    <option value="disaster6">Tsunami</option>
+                </select><br><br>
+
+                <button type="submit">Capture Purchase</button><br><br>
+            </form>
+
+            <input type="submit" value="Done">
+        </div>
+    </div>
+</body>
+</html>
+

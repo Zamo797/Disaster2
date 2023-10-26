@@ -1,0 +1,182 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.ViewProgressModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Progress - Purple & Orange</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF; /* White */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #800080; /* Purple */
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .progress-info {
+            text-align: center;
+        }
+
+            .progress-info h2 {
+                color: #FFA500; /* Orange */
+            }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #FFF; /* White */
+            border-radius: 5px;
+        }
+
+        .progress-bar-fill {
+            width: 70%; /* Adjust this width to represent the progress percentage */
+            height: 20px;
+            background-color: #FFA500; /* Orange */
+            border-radius: 5px;
+        }
+
+
+        .progress-percent {
+            margin-top: 10px;
+            color: #800080; /* Purple */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>View Progress</h1>
+        <p>Track Disaster Alleviation Foundation Progress</p>
+    </div>
+   
+
+    <h2>All Incoming Monetary Donations</h2>
+    <table style="border-collapse: collapse; border: 2px solid #800080 ;">
+        <tr>
+            <th>Donor Name</th>
+            <th>Donor Email</th>
+            <th>Amount</th>
+            <th>Currency</th>
+            <th>Date</th>
+        </tr>
+        
+        <tr>
+            <td> Nomzamo </td>
+            <td> nomzamonhlap@gmail.com </td>
+            <td> 5000 </td>
+            <td> ZAR </td>
+            <td> 25/09/2023</td>
+        </tr>
+    </table
+
+    <div class="container">
+       
+        <div class="progress-info">
+            <h2>Progress</h2>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <p class="progress-percent">70% Donations</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>All incoming goods donations</h2>
+    <table style="border-collapse: collapse; border: 2px solid #800080 ;">
+    
+        <tr>
+            <th>DonorName</th>
+            <th>DonorEmail</th>
+            <th>Anonymous</th>
+            <th>DonationDate</th>
+            <th>Category</th>
+            <th>DonationDescription</th>
+            <th>NewCategory</th>
+            <th>NumberOfItems</th>
+            
+        </tr>
+
+            <tr>
+                <td> Lerato </td>
+                <td> lera34@gmail.com </td>
+                <td> null </td>
+                <td> 01/10/2023 </td>
+                <td> Clothing </td>
+                <td>5 jackets and 4 pants</td>
+                <th>No</th>
+                <th>9</th>
+            </tr>
+     </table>
+        
+        <div class="progress-info">
+            <h2>Progress</h2>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <p class="progress-percent">50% of Donations</p>
+        </div>
+    </div>
+
+            
+
+        <div class="container">
+            <h2>All Disasters</h2>
+            <table style="border-collapse: collapse; border: 2px solid #800080 ;">
+                <tr>
+                    <th> Start Date </th>
+                    <th> End Date </th>
+                    <th> DisasterLocation </th>
+                    <th> DisasterDescription </th>
+                    <th> RequiredAid </th>
+                </tr>
+                
+                <tr>
+                    <td> 10/10/2023 </td>
+                    <td> 15/10/2023 </td>
+                    <td> Soweto </td>
+                    <td> Earthquake </td>
+                    <td> Blankets,Water,Food,Medical Supplies </td>
+                </tr>
+
+            </table>
+            
+            <div class="progress-info">
+                <h2>Progress</h2>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <p class="progress-percent">20% of Reported Disasters</p>
+            </div>
+        </div>
+</body>
+</html>
+
+

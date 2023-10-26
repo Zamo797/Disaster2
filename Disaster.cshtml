@@ -1,0 +1,77 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.DisasterModel
+@{
+    ViewData["Title"] = "Disaster Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disaster Information</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .disaster-container {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 400px;
+        }
+
+            .disaster-container h2 {
+                text-align: center;
+                color: white;
+            }
+
+        .disaster-info {
+            margin-top: 20px;
+        }
+
+            .disaster-info p {
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .disaster-info a {
+                color: white;
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <div class="disaster-container">
+        <h2>Disaster Information</h2>
+        <div class="disaster-info">
+            <p><strong>Current Situation:</strong> A natural disaster has been reported.</p>
+
+            <label for="start_date">Start Date</label>
+            <input type="date" id="start_date" name="start_date" required><br><br>
+
+            <label for="date_date">End Date</label>
+            <input type="date" id="end_date" name="end_date" required><br><br>
+
+            <label for="location">Disaster Location</label>
+            <input type="text" id="location" name="Date" placeholder="Enter Disaster Location" required><br><br>
+            <p><strong>Evacuation:</strong> If advised, evacuate to a safe location immediately.</p>
+
+            <label for="disaster">Disaster Description</label>
+            <textarea id="disaster" name="discription" rows="4" placeholder="Please enter a description of the disaster reported" required></textarea>
+            <p><strong>Emergency Contacts:</strong> Call 911 or your local emergency number for assistance.</p>
+
+            <label for="aid">Required Aid</label>
+            <textarea id="disaster" name="discription" rows="4" placeholder="examples of required aid water provision, clothing, food" required></textarea>
+            <p><strong>Additional Resources:</strong> <a href="#">Local News</a> | <a href="#">Emergency Services</a></p>
+            <input type="submit" value="Done">
+        </div>
+    </div>
+</body>
+</html>

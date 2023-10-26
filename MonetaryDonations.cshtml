@@ -1,0 +1,106 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.MonetaryDonationsModel
+@{
+    ViewData["Title"] = "MonetaryDonations page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monetary Donations</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .donation-container {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 400px;
+        }
+
+            .donation-container h2 {
+                text-align: center;
+                color: white;
+            }
+
+        .donation-form {
+            margin-top: 20px;
+        }
+
+            .donation-form label,
+            .donation-form input,
+            .donation-form select {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+                .donation-form input[type="text"] {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+            .donation-form select {
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #FFF; /* White */
+            }
+
+            .donation-form input[type="submit"] {
+                background-color: #FF8300; /* Orange */
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .donation-form input[type="submit"]:hover {
+                    background-color: #FF8C00; /* Darker Orange on hover */
+                }
+    </style>
+</head>
+<body>
+    <div class="donation-container">
+        <h2>Make a Monetary Donation</h2>
+        <form class="donation-form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your Email">
+
+            <label for="anonymous">Remain Anonymous</label>
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <span>Check this box if you want to remain anonymous</span>
+
+            <label for="amount">Donation Amount</label>
+            <input type="text" id="amount" name="amount" placeholder="Amount in USD" required>
+
+            <label for="currency">Currency</label>
+            <select id="currency" name="currency" required>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="ZAR">ZAR</option>
+               
+            </select>
+
+            <label for="donation_date">Donation Date</label>
+            <input type="date" id="donation_date" name="donation_date" required>
+
+            <input type="submit" value="Donate Now">
+        </form>
+    </div>
+</body>
+</html>
