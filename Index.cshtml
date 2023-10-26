@@ -1,0 +1,96 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+   
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Disaster Alleviation Foundation</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF; /* White */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #800080; /* Purple */
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .donate-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFA500; /* Orange */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .donate-button:hover {
+                background-color: #FF8C00; /* Darker Orange on hover */
+            }
+
+        .mission {
+            text-align: center;
+        }
+
+            .mission h2 {
+                color: #FFA500; /* Orange */
+            }
+
+            .mission p {
+                font-style: italic;
+            }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Disaster Alleviation Foundation</h1>
+        <p>Helping Communities in Need</p>
+        <a class="donate-button" href="#">Donate Now</a>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to The Disaster Alleviation Foundation</h2>
+        <p>We are a non-profit organization dedicated to providing disaster relief and assistance to communities affected by natural disasters.</p>
+        <p>Our mission is to make a positive impact by offering immediate aid, support, and resources to those in need.</p>
+
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>"To mitigate the impact of disasters on vulnerable populations and empower communities to rebuild and thrive."</p>
+        </div>
+    </div>
+</body>
+</html>
+

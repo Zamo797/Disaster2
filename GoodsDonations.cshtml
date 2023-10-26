@@ -1,0 +1,113 @@
+﻿@page
+@model DisasterAlleviationFoundation.Pages.GoodsDonationsModel
+@{
+    ViewData["Title"] = "GoodsDonations page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods Donation</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .donation-container {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 400px;
+        }
+
+            .donation-container h2 {
+                text-align: center;
+                color: white;
+            }
+
+        .donation-form {
+            margin-top: 20px;
+        }
+
+            .donation-form label,
+            .donation-form input,
+            .donation-form select,
+            .donation-form textarea {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+                .donation-form input[type="text"],
+                .donation-form input[type="email"],
+                .donation-form select,
+                .donation-form textarea {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                .donation-form input[type="checkbox"] {
+                    margin-right: 5px;
+                }
+
+                .donation-form input[type="submit"] {
+                    background-color: #FF8300; /* Orange */
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                    .donation-form input[type="submit"]:hover {
+                        background-color: #FF8C00; /* Darker Orange on hover */
+                    }
+    </style>
+</head>
+<body>
+    <div class="donation-container">
+        <h2>Donate Goods</h2>
+        <form class="donation-form" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+
+            <label for="anonymous">Remain Anonymous</label>
+            <input type="checkbox" id="anonymous" name="anonymous">
+
+            <label for="donation_date">Donation Date</label>
+            <input type="date" id="donation_date" name="donation_date" required>
+
+            <label for="Category">Donation Category</label>
+            <input type="checkbox" id="Clothing" name="categoryType[]" value="Clothing">
+            <label for="clothing">Clothing</label><br />
+
+            <input type="checkbox" id="Non-perishable foods" name="categoryType[]" value="Non-perishable foods">
+            <label for="Non-perishable foods">Non-perishable foods</label><br />
+
+            <label for="goods">Donation Description</label>
+            <textarea id="discription" name="discription" rows="4" placeholder="Please enter a description of each item donated" required></textarea>
+
+            <label for="goods">New Categories of Goods</label>
+            <textarea id="new" name="new" rows="4" placeholder="Add a new category of goods you would like to donate."></textarea>
+
+            <label for="amount">Number Of Items</label>
+            <input type="text" id="number" name="numberofitems" placeholder="Enter Number Of Items" required>
+
+
+            <input type="submit" value="Donate Now">
+        </form>
+    </div>
+</body>
+</html>

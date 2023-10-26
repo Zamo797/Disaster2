@@ -1,0 +1,88 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <h2 class="display-4">Welcome to the Disaster Alleviation Foundation, Please Login</h2>
+
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #800080; /* Purple */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /*Login button*/
+        .login-container {
+            background-color: #FFA500; /* Orange */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+
+            .login-container h2 {
+                text-align: center;
+                color: white;
+            }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+            .login-form label,
+            .login-form input {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+                .login-form input[type="text"],
+                .login-form input[type="password"] {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                .login-form input[type="submit"] {
+                    background-color: #FF8300; /* Orange */
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                    .login-form input[type="submit"]:hover {
+                        background-color: #FF8C00; /* Darker Orange on hover */
+                    }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
+
